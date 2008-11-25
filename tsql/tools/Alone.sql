@@ -20,6 +20,7 @@ AS
     SELECT @spidstr = coalesce(@spidstr, '') + 'kill ' + cast(spid as varchar)+ '; ' 
     FROM master..sysprocesses 
     WHERE dbid = db_id(@database) 
+      and spid >= 50
       and spid <> @@SPID; 
       
     EXEC (@spidstr)
