@@ -1,0 +1,24 @@
+<sourceanalysisresultscache>
+  <version>9</version>
+  <sourcecode name="GZip.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2008 11:24:35</timestamp>
+      <milliseconds>870</milliseconds>
+    </settings>
+    <timestamp>10/30/2008 13:00:30</timestamp>
+    <milliseconds>497</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UserDefinedFunctions.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2008 11:24:35</timestamp>
+      <milliseconds>870</milliseconds>
+    </settings>
+    <timestamp>10/30/2008 13:00:46</timestamp>
+    <milliseconds>560</milliseconds>
+    <violations />
+  </sourcecode>
+  <project key="1656086796">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+</sourceanalysisresultscache>
