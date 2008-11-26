@@ -25,3 +25,4 @@ Obj/*
 *.ssmssuo
 *.vbw
 _ReSharper.*
+StyleCop.Cache

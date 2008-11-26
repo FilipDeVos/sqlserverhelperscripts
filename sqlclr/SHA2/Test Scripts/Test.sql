@@ -1,35 +1,14 @@
--- Examples for queries that exercise different SQL objects implemented by this assembly
 
------------------------------------------------------------------------------------------
--- Stored procedure
------------------------------------------------------------------------------------------
--- exec StoredProcedureName
+-- Some samples to debug.
 
-
------------------------------------------------------------------------------------------
--- User defined function
------------------------------------------------------------------------------------------
--- select dbo.FunctionName()
-
-
------------------------------------------------------------------------------------------
--- User defined type
------------------------------------------------------------------------------------------
--- CREATE TABLE test_table (col1 UserType)
--- go
---
--- INSERT INTO test_table VALUES (convert(uri, 'Instantiation String 1'))
--- INSERT INTO test_table VALUES (convert(uri, 'Instantiation String 2'))
--- INSERT INTO test_table VALUES (convert(uri, 'Instantiation String 3'))
---
--- select col1::method1() from test_table
-
-
-
------------------------------------------------------------------------------------------
--- User defined type
------------------------------------------------------------------------------------------
--- select dbo.AggregateName(Column1) from Table1
-
-
-select dbo.fn_sha384('this is a test')
+select dbo.fn_md5('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
+union all
+select dbo.fn_ripemd160('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
+union all
+select dbo.fn_sha1('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
+union all
+select dbo.fn_sha256('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
+union all
+select dbo.fn_sha384('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
+union all
+select dbo.fn_sha512('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse leo. Nulla facilisi. In pulvinar mauris id lectus. Donec velit purus, placerat sit amet, malesuada at, tempor lobortis, est. Nullam quam magna, tempus quis, convallis at, commodo ac, dui. Praesent est. Nunc in tellus. Nulla facilisi. Fusce sit amet diam euismod nibh vehicula blandit. Aliquam erat volutpat. Mauris sodales, orci imperdiet fringilla laoreet, odio diam sagittis nisi, in egestas purus arcu non mauris. Aliquam malesuada tellus id sem. Phasellus sit amet mi. Sed ornare, velit et suscipit aliquet, metus orci aliquet nunc, at blandit justo enim in diam. ')
