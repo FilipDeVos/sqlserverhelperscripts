@@ -1,3 +1,4 @@
+using System;
 using System.Data.SqlTypes;
 using System.Globalization;
 using System.Security.Cryptography;
@@ -45,23 +46,6 @@ namespace SqlServerHelperScripts
         }
 
         /// <summary>
-        /// Convert the Byte array to a 2-char hex encoded string.
-        /// </summary>
-        /// <param name="array">The bye array to encode.</param>
-        /// <returns>The hex string.</returns>
-        private static string ByteArrayToString(byte[] array)
-        {
-            StringBuilder hexed = new StringBuilder();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                hexed.Append(string.Format(CultureInfo.CurrentCulture, "{0:X2}", array[i]));
-            }
-
-            return hexed.ToString();
-        }
-
-        /// <summary>
         /// Encodes the hash. The resulting string is a simple 2-char hex encoded string. 
         /// If you like base64 just use Convert.ToBase64String(); instead of ByteArrayToString();
         /// </summary>
@@ -72,7 +56,8 @@ namespace SqlServerHelperScripts
         {
             string saltedMessage = string.Format(CultureInfo.CurrentCulture, "ChocolateSaltyBalls{0}AreSoSalty!", message);
             byte[] saltedBytes = new UTF8Encoding().GetBytes(saltedMessage);
-            return ByteArrayToString(algorithm.ComputeHash(saltedBytes));
+
+            return BitConverter.ToString(algorithm.ComputeHash(saltedBytes)).Replace("-", string.Empty);
         }
     }
 }
