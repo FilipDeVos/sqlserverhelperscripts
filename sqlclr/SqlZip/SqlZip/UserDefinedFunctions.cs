@@ -1,8 +1,10 @@
+using System;
+using System.Text;
+using Microsoft.SqlServer.Server;
+
 namespace SqlZip
 {
-    using System;
-    using System.Text;
-    using Microsoft.SqlServer.Server;
+
     
     /// <summary>
     /// SQL Server CLR User defined functions used for gzipping and unzipping data.

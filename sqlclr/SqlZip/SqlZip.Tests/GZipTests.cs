@@ -1,12 +1,10 @@
 using System.Text;
+using NUnit.Framework;
 
 namespace SqlZip.Tests
 {
-    using NUnit.Framework;
-    using SqlZip;
-
     [TestFixture]
-    public class GZipTest
+    public class GZipTests
     {
 
         [Test]
@@ -36,14 +34,13 @@ namespace SqlZip.Tests
         [Test]
         public void CompressTestCanHandleComplexInput()
         {
-            string complexData = "";
+            var sb = new StringBuilder();
             for(int i=0;i<=10000;i++)
             {
-                complexData += @"!@#$%^&*()_qwertyuiop[ASDFGHJ" + 0 + 256 ;
-
+                sb.Append( @"!@#$%^&*()_qwertyuiop[ASDFGHJ" + 0 + 256) ;
             }
 
-            byte[] complexByteArray = Encoding.Unicode.GetBytes(complexData);
+            byte[] complexByteArray = Encoding.Unicode.GetBytes(sb.ToString());
 
             byte[] compressedByteArray = GZip.Compress(complexByteArray);
 

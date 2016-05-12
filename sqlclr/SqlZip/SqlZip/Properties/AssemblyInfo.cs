@@ -30,4 +30,3 @@ using System.Security.Permissions;
 [assembly: AssemblyVersion("1.0.*")]
 [assembly: CLSCompliant(true)]
 
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, Execution = true)]

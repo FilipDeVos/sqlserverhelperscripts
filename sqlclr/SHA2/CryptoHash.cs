@@ -5,9 +5,9 @@ using System.Security.Cryptography;
 using System.Text;
 using Microsoft.SqlServer.Server;
 
-namespace SqlServerHelperScripts
+namespace Sha2
 {
-    public static class SHA2Functions
+    public static class CryptoHash
     {
         [SqlFunction(Name = "fn_md5")]
         public static SqlString Md5(string message)
